@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+            margin: 30;
+            padding: 10;
+        }
+        header {
+            background-color: #0e0404;
+            color: #0c1ba388;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav button {
+            background-color: #0d0a96b2;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: col-resize;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h2 { 
+            color: rgba(43, 12, 180, 0.589);
+            
+        } 
+        h1 {
+            color: rgba(43, 12, 180, 0.589);
+            text-align: center;
+            font-size: 50px;
+            
+        }  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jonhatan Fernández</h1>
+        <nav>
+            <button onclick="mostrarSeccion('proyectos')">Proyectos</button>
+            <button onclick="mostrarSeccion('sobre_mi')">Sobre Mí</button>
+            <button onclick="mostrarSeccion('contacto')">Contacto</button>
+        </nav>
+    </header>
+    <section id="proyectos">
+        <h1>Proyectos en que deseo aplicar mis conocimientos de programación</h1>
+        <p> 1- Desarrollo de una Aplicación Web de Gestión de Proyectos.</p>
+         <p>2- Desarrollo de una Aplicación Móvil de Salud y Bienestar</p>
+         <p>3- Desarrollo de un Sistema de Recomendación de Películas</p>
+    </section>
+    <section id="sobre_mi" style="display: none;">
+        <h2>Sobre Mí</h2>
+        <img src="foto2.png"  height="200" width="300" />
+        <p>¡Hola! Soy Jonhatan, estudiante de programando Más.
+            Tengo 18 años , vivo en la ciudad de limpio y actualmente tengo conocimientos basicos en HTML y CSS.</p>
+        </p>
+        <H2>EXPERIENCIA  </H2>
+        <p>1- Pasantia educativa en la Administración Nacional de Electricidad</p>
+        <p>2- Asesor comercial por call center</p>
+    </section>
+    <section id="contacto" style="display: none;">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de daniellfernandxz@gmail.com o seguirme en mis redes sociales como @ danyjff.</p>
+        <Form action="#">
+            <input name="nombre" type="text" placeholder="ingrese su nombre">
+            <input name="correo" type="email" placeholder="ingrese su correo">
+             <textarea name="mensaje" placeholder="ingrese su mensaje"></textarea>
+             <input type="submit" value="enviar">
+        </Form>
+    </section>
+    <footer>
+        <p>copyright &copy;2024</p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('section').forEach(seccion => {
+                seccion.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
